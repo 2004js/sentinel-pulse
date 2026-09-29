@@ -1,0 +1,9 @@
+SENTINEL PULSE — LOCAL SIH DEMO
+
+1. Open PowerShell in this folder.
+2. Run: powershell -ExecutionPolicy Bypass -File .\RUN_LOCAL_DEMO.ps1
+3. Open: http://localhost:5173
+4. Demo accounts are in LOGIN_CREDENTIALS.md.
+5. Follow VIDEO_DEMO_SCRIPT.md for the full PS module demonstration.
+
+Production deployment is separate. See PRODUCTION_DEPLOYMENT.md.

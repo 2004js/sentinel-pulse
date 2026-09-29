@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+.git/
+*.db
+.local_encryption_key
+__pycache__/

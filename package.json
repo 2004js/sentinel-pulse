@@ -1,0 +1,23 @@
+{
+  "name": "sentinel-pulse-production",
+  "version": "5.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "api": "python -m uvicorn backend.app:app --reload --port 8000",
+    "api:prod": "python -m uvicorn backend.app:app --host 0.0.0.0 --port ${PORT:-8000}",
+    "train": "python backend/train_model.py"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.57.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.4.1",
+    "vite": "5.4.14"
+  }
+}

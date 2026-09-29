@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: sentinel-pulse-api
+    runtime: python
+    rootDir: .
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health/ready
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_JWT_AUDIENCE
+        value: authenticated
+      - key: SENTINEL_ENCRYPTION_KEY_B64
+        sync: false
+      - key: SENTINEL_HASH_SALT
+        sync: false
+      - key: DEMO_AUTH_ENABLED
+        value: "false"
+      - key: SEED_DEMO_DATA
+        value: "false"
+      - key: ENABLE_SWAGGER
+        value: "false"

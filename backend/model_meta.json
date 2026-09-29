@@ -1,0 +1,43 @@
+{
+  "models": [
+    "XGBoost",
+    "RandomForestClassifier",
+    "GradientBoostingRegressor",
+    "IsolationForest"
+  ],
+  "ensemble_weights": {
+    "xgb": 0.55,
+    "rf": 0.45
+  },
+  "features": [
+    "avg_mood",
+    "mood_slope",
+    "low_mood_days",
+    "deployment_months",
+    "leave_denials",
+    "overtime_hours",
+    "sleep_disruption_days",
+    "distress_days",
+    "phq2",
+    "gad2",
+    "engagement_streak",
+    "duty_hours_per_week",
+    "transfer_frequency_12m",
+    "training_commitments",
+    "workload_trend",
+    "biometric_authorized",
+    "hrv",
+    "sleep_hours"
+  ],
+  "training_data": "synthetic_demo_only",
+  "training_rows": 10000,
+  "validation_rows": 2000,
+  "roc_auc": 0.8807,
+  "accuracy": 0.933,
+  "f1": 0.965,
+  "burnout_r2": 0.7175,
+  "burnout_rmse": 5.6205,
+  "anomaly_detector": "IsolationForest",
+  "explainability": "SHAP TreeExplainer on XGBoost",
+  "warning": "Demo metrics are not clinical or operational evidence. Replace with approved anonymized force data before deployment."
+}
